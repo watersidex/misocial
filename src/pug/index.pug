@@ -1,0 +1,30 @@
+include mixins/mixin
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title misocial
+        link(rel="stylesheet", href="css/styles.css")
+        link(rel="preconnect" href="https://fonts.googleapis.com")
+        link(rel="preconnect" href="https://fonts.gstatic.com" crossorigin)
+        link(href="https://fonts.googleapis.com/css2?family=Maven+Pro&family=Montserrat:wght@500&display=swap" rel="stylesheet")
+        
+    body 
+        header 
+            +topMenu (menu)
+            +allTitles (titles[0])
+            a(href="#marketing").down ↓  
+        main 
+            +allTitles (titles[1])
+            +priceCards(cards)
+            section.control 
+                +allTitles (titles[2])
+                .control__btn__box#marketing
+                    a(href="#").control__btn GET STARTED 
+                    a(href="#").control__btn explore features
+        footer 
+            +topMenu (menu)
+            p &copy; 2017 Mass Impressions Tranmautritam. Make the right impression.
+
+            
